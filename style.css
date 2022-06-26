@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* =============
+Typography 
+================*/
+
+h1{
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+h2{
+    font-size: 1.3125rem;
+    margin: 0;
+}
+
+h1 + p{
+    color: #F18119;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.3125rem;
+    margin: 0;
+}
+
+.upperText,
+.smallText{
+    font-size: 0.625rem;
+}
+
+
+/* ============
+Layout
+=============== */
+
+.column{
+    width: 100%;
+    padding: 1em;
+}
+
+h2{
+    text-transform: uppercase;
+}
+
+.img-column > *,
+.form-column > * {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* img-column */
+
+.img-column{
+    background-color: rgb(54, 69, 79);
+    background-image: url(./img/pizza.png);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 .5em 2em;
+    justify-content: space-between;
+    height: 50vh;
+}
+
+.upperText{
+    margin: 0;
+    padding-top: 2px;
+    order: -1;
+    margin:0 auto;
+    color: #F18119;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-top: 5px solid #F18119;
+    border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
+}
+
+
+/* form-column */
+
+form{
+    width: 80%;
+    max-width: 300px;
+}
+
+.form-column h2{
+    margin-bottom: 0;
+    color: #404040;
+}
+
+.h2-sub{
+    margin-top: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #F18119;
+}
+
+.form-para{
+    padding: 1.5em;
+    color: #5A5A5A;
+    margin-bottom: 0;
+}
+
+input{
+    text-align: center;
+    display: block;
+    margin: 0 auto 1em;
+    padding: 0.8em;
+    border-radius: 7px;
+    border: 2px solid #818181;
+    transform: scale(1);
+    transition: 250ms transform;
+    width: 100%;
+}
+
+input:focus{
+    transform: scale(1.1);
+}
+
+.btn{
+    display: block;
+    margin: auto;
+    padding: 0.8em;
+    width: 100%;
+    border-radius: 7px;
+}
+
+.btn-primary{
+    background-image: linear-gradient(270deg,#FF713B 0%,#FFA51D 100%);
+    color: white;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: scale(1);
+    transition: 250ms transform;
+}
+
+
+.btn-primary:hover,
+.btn-primary:focus{
+    transform: scale(1.1);
+}
+
+
+@media (min-width: 675px) {
+    h1{
+        font-size: 3.5rem;
+    }
+
+    h2{
+        font-size: 1.75rem;
+    }
+
+    body{
+        font-size: 1.125rem;
+    }
+
+    .container{
+        display: flex;
+    }
+
+    .img-column,
+    .form-column{
+        width: 50%;
+        min-height: 100vh;
+    }
+
+    .form-column{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .form-column{
+        width: 50%;
+    }
+}
+
